@@ -24,18 +24,7 @@ async function addAnswer(req, res) {
   }
 }
 
-// async function getAnswer(req, res) {
-//     // const {questionid}=req.params
-//     try {
-//         const {questionid}=req.params
-//         const [answer] = await dbConnection.query(`SELECT * from answers WHERE questionid=?
-//     `,[questionid])
-//            return res.json({answer})
-//        } catch (error) {
-//         return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({msg:"something want wrong ,try again later"})
-//        }
 
-// }
 
 async function getAnswer(req, res) {
   try {
