@@ -3,6 +3,8 @@ const dbConnection = mysql2.createPool({
     user: process.env.USER,
     database: process.env.DATABASE,
     host: "localhost",
+    // host: process.env.HOST,
+    // port:process.env.PORT,
     password: process.env.PASSWORD,
     connection:10
 })
