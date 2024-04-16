@@ -2,7 +2,8 @@ require("dotenv").config()
 const express = require("express");
 const bodyparser = require('body-parser');
 const app = express();
-const port=5500
+const port =process.env.PORT
+
 
 const cors = require('cors')
 app.use(cors())
@@ -35,7 +36,8 @@ async function start() {
         const result = await dbConnection.execute("select 'test' ")
         await app.listen(port)
         console.log("database connection established")
-        console.log(`listning on ${port}`);
+        // console.log(`listning on ${port}`);
+       
     } catch (error) {
         console.log(error.message)
     }
